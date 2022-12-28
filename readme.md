@@ -33,10 +33,12 @@ Create dummy products to test the API
 
 Hit API endpoint to buy ice cream from truck
 with payload
-{
+
+`{
   'product':'product-slug',
   'truck':'truck-slug'
-}
+}`
+
 - http://127.0.0.1:8000/api/v1/buy
 
 
