@@ -1,28 +1,28 @@
 clone this repo
 
 install virtualenv using 
-- pip install virtualenv
+- `pip install virtualenv`
 
 create new env using
 
-- virtualenv env or python -m virtualenv env
+- `virtualenv env` or `python -m virtualenv env`
 
 activate virtualenv
 
-- (linux) source env/bin/activate
-- (windows) env\bin\activate
+- (linux) `source env/bin/activate`
+- (windows) `env\bin\activate`
 
 install dependecies in env
 
-- pip install -r requirements.txt
+- `pip install -r requirements.txt`
 
 Run migrations
 
-- python manage.py migrate
+- `python manage.py migrate`
 
 Create a superuser using 
 
-- python manage.py createsuperuser
+- `python manage.py createsuperuser`
 
 Go to admin panel - 
 
@@ -42,4 +42,4 @@ with payload
 
 Hit API endpoint to check total sales of truck
 
-- http://127.0.0.1:8000/api/v1/<str:truck-slug>/total-sales
+- http://127.0.0.1:8000/api/v1/truck-slug/total-sales
