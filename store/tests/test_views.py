@@ -156,4 +156,5 @@ class StoreViewsTests(APITestCase):
 		self.assertEqual(response_body.get('truck'), self.truck.slug)
 		self.assertEqual(response_body.get('total_sales'), self.truck.money_made)
 		self.assertEqual(response_body.get('total_sales') > 0, True)
+		self.assertEqual(len(response_body.get('products')) > 0, True)
 		self.assertEqual(response.status_code, status.HTTP_200_OK)

@@ -29,7 +29,11 @@ Go to admin panel -
 - http://127.0.0.1:8000/admin
 
 
-Create dummy products to test the API
+Create dummy products to test the API or you can load the dummy data from db.json file
+
+using
+
+ - `python manage.py loaddata db.json`
 
 Hit API endpoint to buy ice cream from truck
 with payload

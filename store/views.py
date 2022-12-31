@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 import re
 from .models import Truck , Product
+from .serializers import ProductSerializer
 from .utils import checkAvailability
 # Create your views here
 
@@ -52,6 +53,8 @@ def TotalSalesView(request,truck):
 	truck_qs = Truck.objects.filter(slug=truck)
 	if truck_qs.exists():
 		truck = truck_qs.first()
-		return Response({'truck':truck.name,'total_sales':truck.money_made})
+		products = Product.objects.filter(truck=truck)
+		serializer = ProductSerializer(products,many=True)
+		return Response({'truck':truck.name,'total_sales':truck.money_made,'products':serializer.data})
 	else:
 		return Response({'message':'Invalid Truck identified'},status=status.HTTP_404_NOT_FOUND)
