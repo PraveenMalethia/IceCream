@@ -35,6 +35,10 @@ using
 
  - `python manage.py loaddata db.json`
 
+
+Run test using 
+  - `python manage.py test`
+
 Hit API endpoint to buy ice cream from truck
 with payload
 
